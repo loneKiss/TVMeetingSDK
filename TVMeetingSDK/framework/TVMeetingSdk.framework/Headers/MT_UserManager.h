@@ -88,8 +88,6 @@ MT_InterfaceDestroySingle(UserManager)
 
 - (BOOL)getConnectStatus;
 - (BOOL)getIsAllQuiet;
-/** 获取bundle */
--(NSBundle *)getResourcesBundle;
 
 /** 是否显示首字母索引条状态 */
 - (void)saveIsIndexes:(BOOL)indexes;

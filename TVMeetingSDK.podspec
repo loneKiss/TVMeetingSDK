@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "TVMeetingSDK"
-spec.version      = "1.0.3"
+spec.version      = "1.0.4"
 spec.summary      = "TVMeetingSDK for IOS"
 spec.description  = "TVMeetingSDK.framework一款用于开启即时视频会议的sdk"
 spec.homepage     = "https://github.com/loneKiss/TVMeetingSDK"
@@ -13,12 +13,12 @@ spec.source       = { :git => "https://github.com/loneKiss/TVMeetingSDK.git", :t
 spec.resources       = ['TVMeetingSDKReadme.md']
 spec.vendored_frameworks = "TVMeetingSDK/framework/*.framework"
 
+spec.source_files = 'TVMeetingSDK/Headers/*.h'
 
 # 图片，其他资源文件存放的路径，需要注意的是，xib，nib也属于资源文件
 spec.resource_bundles = {
     # 这是个数组，可以添加其他bundle
-    'TVMeetingSdkImages' => ['TVMeetingSDK/Resources/Images/*'],
-    'TVMeetingSdkXibs' => ['TVMeetingSDK/Resources/Xib/*'],
+    'TVMeetingSdk' => ['TVMeetingSDK/Resources/*'],
   }
 
 spec.requires_arc    = true
