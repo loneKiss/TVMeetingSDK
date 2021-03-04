@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "TVMeetingSDK"
-spec.version      = "1.0.4"
+spec.version      = "1.0.5"
 spec.summary      = "TVMeetingSDK for IOS"
 spec.description  = "TVMeetingSDK.framework一款用于开启即时视频会议的sdk"
 spec.homepage     = "https://github.com/loneKiss/TVMeetingSDK"
@@ -11,7 +11,7 @@ spec.author       = { "loneKiss" => "775865767@qq.com" }
 spec.platform     = :ios, "9.0"
 spec.source       = { :git => "https://github.com/loneKiss/TVMeetingSDK.git", :tag => spec.version }
 spec.resources       = ['TVMeetingSDKReadme.md']
-spec.vendored_frameworks = "TVMeetingSDK/framework/*.framework"
+spec.vendored_frameworks = "TVMeetingSDK/Classes/*.framework"
 
 spec.source_files = 'TVMeetingSDK/Headers/*.h'
 

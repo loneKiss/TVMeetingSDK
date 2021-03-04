@@ -1,6 +1,0 @@
-framework module TVMeetingSdk {
-  umbrella header "TVMeetingSdk.h"
-
-  export *
-  module * { export * }
-}
