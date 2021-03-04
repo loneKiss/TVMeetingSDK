@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SingleColumnView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XtQ-cr-YhS">
+                    <rect key="frame" x="15" y="14" width="374" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LF0-gF-ICg">
+                    <rect key="frame" x="15" y="43.5" width="374" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tfq-EJ-p0O">
+                    <rect key="frame" x="393" y="37" width="6" height="6"/>
+                    <color key="backgroundColor" red="0.27450980392156865" green="0.74509803921568629" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="6" id="27C-OK-kcJ"/>
+                        <constraint firstAttribute="height" constant="6" id="vgl-xA-qP9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tfq-EJ-p0O" secondAttribute="trailing" constant="15" id="BNV-B3-vDg"/>
+                <constraint firstItem="LF0-gF-ICg" firstAttribute="top" secondItem="XtQ-cr-YhS" secondAttribute="bottom" constant="10" id="H6x-SL-UET"/>
+                <constraint firstItem="XtQ-cr-YhS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="14" id="Pf6-ev-MQk"/>
+                <constraint firstItem="Tfq-EJ-p0O" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="UBg-DU-yFw"/>
+                <constraint firstItem="LF0-gF-ICg" firstAttribute="trailing" secondItem="XtQ-cr-YhS" secondAttribute="trailing" id="YQQ-wf-BLy"/>
+                <constraint firstItem="LF0-gF-ICg" firstAttribute="leading" secondItem="XtQ-cr-YhS" secondAttribute="leading" id="bsG-NH-BKO"/>
+                <constraint firstItem="XtQ-cr-YhS" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="cKc-Gc-Vaq"/>
+                <constraint firstAttribute="trailing" secondItem="XtQ-cr-YhS" secondAttribute="trailing" constant="25" id="e1P-jG-N5u"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="circle" destination="Tfq-EJ-p0O" id="h64-CV-R5e"/>
+                <outlet property="submitTitle" destination="LF0-gF-ICg" id="I60-iM-dDp"/>
+                <outlet property="titleLabel" destination="XtQ-cr-YhS" id="6to-1a-M4n"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </view>
+    </objects>
+</document>
