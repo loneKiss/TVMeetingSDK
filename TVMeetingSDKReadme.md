@@ -2,9 +2,9 @@
 一款用于开启即时视频会议的sdk
 
 一、会议系统sdk
-TVMeetingSdk.framework为会议系统组件
-pod 'TVMeetingSdk' 
-TVMeetingSdk依赖于NemoSDK,所以不需要下载NemoSDK,直接pod 'TVMeetingSdk' 即可
+TVMeetingSDK.framework为会议系统组件
+pod 'TVMeetingSDK' 
+TVMeetingSDK依赖于NemoSDK,所以不需要下载NemoSDK,直接pod 'TVMeetingSDK' 即可
 
 二、小鱼sdk
 NemoSDK.framework
@@ -32,8 +32,8 @@ pod 'PPBadgeView','~> 2.1.0'
 
 
 四、组件的使用
-1、#import <TVMeetingSdk/MT_TabBarController.h>
-      #import <TVMeetingSdk/MT_UserManager.h>
+1、#import <TVMeetingSDK/MT_TabBarController.h>
+      #import <TVMeetingSDK/MT_UserManager.h>
      
 2、先初始化会议系统主控制器MT_TabBarController
 3、再调用初始化会议系统的方法
