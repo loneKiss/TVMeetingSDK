@@ -1,6 +1,6 @@
 //
-//  TVMeetingSdk.h
-//  TVMeetingSdk
+//  TVMeetingSDK.h
+//  TVMeetingSDK
 //
 //  Created by 龙阳昱辰 on 2021/3/3.
 //
@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface TVMeetingSdk : NSObject<NSCopying,NSMutableCopying>
+@interface TVMeetingSDK : NSObject<NSCopying,NSMutableCopying>
 
 /** 单例 */
 +(instancetype)shareMeeting;
