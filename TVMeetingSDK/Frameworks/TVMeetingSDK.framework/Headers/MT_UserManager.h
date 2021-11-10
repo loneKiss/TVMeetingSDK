@@ -15,7 +15,6 @@ MT_InterfaceSingle(UserManager)
 
 MT_InterfaceDestroySingle(UserManager)
 
-@property (nonatomic, strong) UIViewController *controller;
 /**
 *  初始化会议系统
 *
@@ -34,8 +33,10 @@ MT_InterfaceDestroySingle(UserManager)
  *  @param refreshToken              刷新登录token
  *  @param projectToken              集成项目的token
  *  @param versonType                项目环境配置
+ *  @param parentVC                  父控制器
  */
-- (void)saveAccountId:(NSString *)accountId andAccountName:(NSString *)accountName andFishAccountId:(NSString *)fishAccountId andAccessToken:(NSString *)accessToken andRefreshToken:(NSString *)refreshToken andProjectToken:(NSString *)projectToken withProjectVerson:(NSInteger)versonType;
+- (void)saveAccountId:(NSString *)accountId andAccountName:(NSString *)accountName andFishAccountId:(NSString *)fishAccountId andAccessToken:(NSString *)accessToken andRefreshToken:(NSString *)refreshToken andProjectToken:(NSString *)projectToken andProjectVerson:(NSInteger)versonType
+    withParentVC:(UIViewController *)parentVC;
 
 
 /**
@@ -79,6 +80,7 @@ MT_InterfaceDestroySingle(UserManager)
 - (NSString *)getLoginMessage;
 /** 取值 */
 -(NSString *)getAccountId;
+-(NSString *)getAccountName;
 - (NSArray *)getParentDepartment;
 - (NSString *)getAccessToken;
 - (NSString *)getRefreshToken;
@@ -92,7 +94,7 @@ MT_InterfaceDestroySingle(UserManager)
 /** 是否显示首字母索引条状态 */
 - (void)saveIsIndexes:(BOOL)indexes;
 - (BOOL)getIsIndexes;
- /** 登录会议系统 */
+ /** 强制下线重新登录会议系统 */
 -(void)loginMeetingAction;
 /** 退出登录 */
 -(void)logOut;

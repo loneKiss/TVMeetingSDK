@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XYConferenceEchoReminderView">
+            <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DeR-Ej-B6m">
+                    <rect key="frame" x="189.5" y="5" width="288" height="88.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="已检测到回音，可能您离终端太近声音已自动关闭，请调整音量键或点击按钮开启声音" textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="It0-xV-T7P">
+                            <rect key="frame" x="15" y="12" width="258" height="26.5"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="200" constant="26" id="kDQ-IM-CYi"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67G-Zz-53g">
+                            <rect key="frame" x="111" y="50.5" width="66" height="26"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="26" id="Jj5-tD-u95"/>
+                                <constraint firstAttribute="width" priority="200" constant="66" id="aG1-AK-L7D"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                            <inset key="contentEdgeInsets" minX="10.5" minY="0.0" maxX="10.5" maxY="0.0"/>
+                            <state key="normal" title="开启声音">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="13"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="unmuteAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="3q1-nu-O3I"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="288" id="Jdi-8K-dDE"/>
+                        <constraint firstAttribute="bottom" secondItem="67G-Zz-53g" secondAttribute="bottom" constant="12" id="Kn5-sy-nAN"/>
+                        <constraint firstAttribute="height" priority="200" constant="128" id="SSb-9v-Qsh"/>
+                        <constraint firstItem="It0-xV-T7P" firstAttribute="top" secondItem="DeR-Ej-B6m" secondAttribute="top" constant="12" id="X1x-zt-nKG"/>
+                        <constraint firstItem="67G-Zz-53g" firstAttribute="centerX" secondItem="DeR-Ej-B6m" secondAttribute="centerX" id="c0q-nm-iRT"/>
+                        <constraint firstAttribute="trailing" secondItem="It0-xV-T7P" secondAttribute="trailing" constant="15" id="hQW-ZJ-OVc"/>
+                        <constraint firstItem="67G-Zz-53g" firstAttribute="top" secondItem="It0-xV-T7P" secondAttribute="bottom" constant="12" id="hdL-qB-Lou"/>
+                        <constraint firstItem="It0-xV-T7P" firstAttribute="leading" secondItem="DeR-Ej-B6m" secondAttribute="leading" constant="15" id="pV7-Dp-NIu"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="3"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="DeR-Ej-B6m" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Zx0-7Q-tq3"/>
+                <constraint firstItem="DeR-Ej-B6m" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="a6T-sa-iti"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="backgroundViewConsTop" destination="Zx0-7Q-tq3" id="fk5-2b-2Od"/>
+                <outlet property="reminderBackgroundView" destination="DeR-Ej-B6m" id="Sjn-GB-O5f"/>
+            </connections>
+            <point key="canvasLocation" x="-17" y="20"/>
+        </view>
+    </objects>
+</document>

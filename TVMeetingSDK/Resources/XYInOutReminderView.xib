@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XYInOutReminderView">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="333"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OLa-4v-53k">
+                    <rect key="frame" x="5" y="0.0" width="64" height="30"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="MAe-Iw-2Uc"/>
+                        <constraint firstAttribute="width" constant="64" id="bpG-GA-2FK"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXO-US-jzU">
+                    <rect key="frame" x="5" y="0.0" width="64" height="30"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="11"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" image="calling_msg_open_btn"/>
+                    <state key="selected" title="隐藏" image="calling_msg_hiden_btn"/>
+                    <connections>
+                        <action selector="clickHiddenEvent:" destination="iN0-l3-epB" eventType="touchUpInside" id="MYu-pK-1cF"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Kd-Mo-G4B">
+                    <rect key="frame" x="5" y="35" width="427" height="298"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="OLa-4v-53k" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="9ip-P9-dnH"/>
+                <constraint firstItem="8Kd-Mo-G4B" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="5" id="Dl1-7W-tHS"/>
+                <constraint firstItem="dXO-US-jzU" firstAttribute="leading" secondItem="OLa-4v-53k" secondAttribute="leading" id="EM3-dx-Ied"/>
+                <constraint firstItem="OLa-4v-53k" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="GIG-7o-on9"/>
+                <constraint firstItem="dXO-US-jzU" firstAttribute="bottom" secondItem="OLa-4v-53k" secondAttribute="bottom" id="JVw-6F-OPp"/>
+                <constraint firstItem="dXO-US-jzU" firstAttribute="top" secondItem="OLa-4v-53k" secondAttribute="top" id="X2l-YF-wEn"/>
+                <constraint firstItem="8Kd-Mo-G4B" firstAttribute="top" secondItem="OLa-4v-53k" secondAttribute="bottom" constant="5" id="oH4-kU-dIw"/>
+                <constraint firstItem="dXO-US-jzU" firstAttribute="trailing" secondItem="OLa-4v-53k" secondAttribute="trailing" id="obQ-ax-cpm"/>
+                <constraint firstAttribute="bottom" secondItem="8Kd-Mo-G4B" secondAttribute="bottom" id="uaV-vX-zHl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Kd-Mo-G4B" secondAttribute="trailing" constant="5" id="uq1-eh-lk0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="hiddenBtn" destination="dXO-US-jzU" id="90T-Ts-WFG"/>
+                <outlet property="tableView" destination="8Kd-Mo-G4B" id="zVD-Je-Oxn"/>
+                <outlet property="touchBottomView" destination="OLa-4v-53k" id="zpR-fV-Xi8"/>
+                <outlet property="touchViewConsW" destination="bpG-GA-2FK" id="Dbv-ml-TTt"/>
+            </connections>
+            <point key="canvasLocation" x="154.34782608695653" y="307.03125"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="calling_msg_hiden_btn" width="8.5" height="9"/>
+        <image name="calling_msg_open_btn" width="8.5" height="9"/>
+    </resources>
+</document>

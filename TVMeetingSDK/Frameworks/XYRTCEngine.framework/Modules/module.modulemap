@@ -1,0 +1,6 @@
+framework module XYRTCEngine {
+  umbrella header "XYRTCEngine.h"
+
+  export *
+  module * { export * }
+}

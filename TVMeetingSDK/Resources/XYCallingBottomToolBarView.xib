@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="XYCallingBottomToolBarView">
+            <rect key="frame" x="0.0" y="0.0" width="433" height="85"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XoG-yl-xL8">
+                    <rect key="frame" x="0.0" y="0.0" width="433" height="85"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.596830985915493" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bao-TG-pyv">
+                    <rect key="frame" x="25" y="0.0" width="383" height="52"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="52" id="zn2-VO-fdX"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="XoG-yl-xL8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="30Z-eu-FDr"/>
+                <constraint firstAttribute="bottom" secondItem="XoG-yl-xL8" secondAttribute="bottom" id="Uzm-Nx-Agb"/>
+                <constraint firstAttribute="trailing" secondItem="XoG-yl-xL8" secondAttribute="trailing" id="aCd-vx-kaf"/>
+                <constraint firstItem="bao-TG-pyv" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="kSK-yZ-XxZ"/>
+                <constraint firstItem="XoG-yl-xL8" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="orO-bi-AgE"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bao-TG-pyv" secondAttribute="trailing" constant="25" id="wuy-56-M4U"/>
+                <constraint firstItem="bao-TG-pyv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="25" id="zmM-sH-Cw2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backView" destination="XoG-yl-xL8" id="3kD-sh-eqF"/>
+                <outlet property="containerView" destination="bao-TG-pyv" id="s9f-AD-mev"/>
+            </connections>
+            <point key="canvasLocation" x="151.44927536231884" y="416.18303571428572"/>
+        </view>
+    </objects>
+</document>
