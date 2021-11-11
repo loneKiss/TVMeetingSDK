@@ -44,11 +44,15 @@ MT_InterfaceDestroySingle(UserManager)
  *
  *  @param userInfo                  极光推送进入会议系统初始化字典
  *  @param versonType                项目环境配置
+ *  @param parentVC                  父控制器
  */
-- (void)setUpMeetingSDKWithDictionary:(NSMutableDictionary *)userInfo withProjectVerson:(NSInteger)versonType;
+- (void)setUpMeetingSDKWithDictionary:(NSMutableDictionary *)userInfo andProjectVerson:(NSInteger)versonType withParentVC:(UIViewController *)parentVC;
 
-/** 极光推送进入会议系统逻辑 */
+/** 收到极光推送时,还未进入会议系统逻辑 */
 - (void)jPushEnterMeetingAction;
+
+/** 收到极光推送时,在会议系统中,则直接判断会议状态 --> 会议状态 0未开始 1进行中 2已结束  */
+-(void)getMeetingStatus:(NSString *)meetingId;
 
 - (void)saveDepartmentType:(NSString *)departmentType;
 /** 登录会议系统的状态 0:登录中 1:登录失败 2:多终端登录 3:登陆成功*/
@@ -95,7 +99,7 @@ MT_InterfaceDestroySingle(UserManager)
 - (void)saveIsIndexes:(BOOL)indexes;
 - (BOOL)getIsIndexes;
  /** 强制下线重新登录会议系统 */
--(void)loginMeetingAction;
+-(void)loginMeetingAgain;
 /** 退出登录 */
 -(void)logOut;
 
@@ -107,9 +111,6 @@ MT_InterfaceDestroySingle(UserManager)
 
 /** 上传日志 */
 -(void)uploadLog:(NSString *)log;
-
-/** 判断会议状态 --> 会议状态 0未开始 1进行中 2已结束  */
--(void)getMeetingStatus:(NSString *)meetingId;
 
 /** 是否在会议中 */
 - (BOOL)isNowInMeeting;

@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
 
 spec.name         = "TVMeetingSDK"
-spec.version      = "1.1.2"
+spec.version      = "2.0.0"
 spec.summary      = "TVMeetingSDK for IOS"
 spec.description  = "TVMeetingSDK.framework一款用于开启即时视频会议的sdk"
 spec.homepage     = "https://github.com/loneKiss/TVMeetingSDK"
