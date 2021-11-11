@@ -127,5 +127,10 @@ MT_InterfaceDestroySingle(UserManager)
 
 @property(nonatomic,assign)BOOL allowRotation;//是否允许转向
 
+/**
+ @brief 获取sdk版本号
+ */
++ (NSString *)getSDKVersion;
+
 @end
 
